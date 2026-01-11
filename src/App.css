@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #ff8c42;
+  --secondary-color: #004080;
+  --font-family: 'Playfair Display', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  z-index: 10;;
+}
+
+.navbar .navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbar .navbar-links {
+  display: flex;
+  gap: 1.5rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  gap: 15px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  
+}
+.hero-overlay h2 {
+  font-size: 1rem;
+  line-height: 2rem;
+
+}
+
+.hero-overlay p {
+  font-size: .9rem;
+  max-width: 500px;
+  line-height: 1rem;
+  margin-top: 1rem;
+
+}
+
+.hero-btn {
+  margin-top: 2rem;
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  background-color: #ff8c42;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+

@@ -1,3 +1,4 @@
+import "./App.css"
 import { NavBar } from "./components/NavBar"
 import { ItemListContainer } from "./components/ItemListContainer"
 
@@ -9,7 +10,10 @@ function App() {
         <NavBar />
       </div>
       <div>
-        <ItemListContainer greeting="Bienvenido a Wayra Travel" />
+        <ItemListContainer 
+        greeting="Aún hay mucho por descubrir"
+        subtitle="Wayra Travel" 
+        description="Explorá el mundo con experiencias diseñadas para vos" />
       </div>
     </>
   )
