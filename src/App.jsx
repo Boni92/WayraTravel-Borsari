@@ -1,8 +1,16 @@
+import { NavBar } from "./components/NavBar"
+import { ItemListContainer } from "./components/ItemListContainer"
+
 function App() {
 
   return (
     <>
-      <h1>Wayra Travel</h1>
+      <div>
+        <NavBar />
+      </div>
+      <div>
+        <ItemListContainer />
+      </div>
     </>
   )
 }
