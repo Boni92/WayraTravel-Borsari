@@ -1,12 +1,8 @@
-export function ItemListContainer() {
+export function ItemListContainer(props) {
     return (
         <main>
             <p>Contenido principal</p>
-            <ul>
-                <li>Viaje a Porto</li>
-                <li>Viaje a Machu Pichu</li>
-                <li>Viaje a Montevideo</li>
-            </ul>
+            <h3>{props.greeting}</h3>
         </main>
     )
 }

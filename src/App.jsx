@@ -9,7 +9,7 @@ function App() {
         <NavBar />
       </div>
       <div>
-        <ItemListContainer />
+        <ItemListContainer greeting="Bienvenido a Wayra Travel" />
       </div>
     </>
   )
