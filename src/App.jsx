@@ -1,22 +1,30 @@
-import "./App.css"
-import { NavBar } from "./components/NavBar"
-import { ItemListContainer } from "./components/ItemListContainer"
+import "./App.css";
+import { NavBar } from "./components/NavBar";
+import NotFound from "./pages/NotFound";
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ItemDetailContainer from "./pages/ItemDetailContainer";
+import CategoryContainer from "./pages/CategoryContainer";
 
 function App() {
-
   return (
     <>
-      <div>
-        <NavBar />
-      </div>
-      <div>
-        <ItemListContainer 
-        greeting="Aún hay mucho por descubrir"
-        subtitle="Wayra Travel" 
-        description="Explorá el mundo con experiencias diseñadas para vos" />
-      </div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/Categorias/:categoriaId"
+          element={<CategoryContainer />}
+        />
+        <Route
+          path="/categorias/:categoriaId/:itemId"
+          element={<ItemDetailContainer />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

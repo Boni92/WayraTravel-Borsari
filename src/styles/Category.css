@@ -1,0 +1,102 @@
+/* Hero section */
+.category-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay para legibilidad */
+.category-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* glass card (la que ya conocés) */
+.category-hero-glass {
+  position: relative;
+  z-index: 2;
+
+  padding: 28px 32px;
+  border-radius: 20px;
+  min-width: 50%;
+  width: 65%;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: white;
+}
+
+.category-hero-glass h1 {
+  margin-bottom: 8px;
+  font-size: 4rem;
+}
+.category-hero-glass p {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.category-hero-glass input {
+  margin-top: 14px;
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 999px;
+  border: none;
+}
+
+/* paquetes destacados */
+.featured-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.featured-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1d3b6e;
+  margin: 0;
+}
+
+.featured-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3163bb;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.featured-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Panel grande tipo "bandeja" */
+.featured-panel {
+  border-radius: 22px;
+  padding: 2rem;
+  background: rgba(220, 220, 220, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}

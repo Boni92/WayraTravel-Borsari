@@ -1,7 +1,7 @@
 :root {
   --primary-color: #ff8c42;
   --secondary-color: #004080;
-  --font-family: 'Playfair Display', sans-serif;
+  --font-family: "Playfair Display", sans-serif;
 }
 
 *,
@@ -9,8 +9,15 @@
 *::after {
   box-sizing: border-box;
 }
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: inherit;
 }
 
 body {
@@ -20,25 +27,36 @@ body {
 }
 
 /* NAVBAR */
-
 .navbar {
-  width: 100%;
   position: absolute;
   top: 0;
-  z-index: 11;
-  padding: 20px 40px;
+  left: 0;
+  width: 100%;
+
+  padding: 16px 40px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  color: white;
-  z-index: 10;;
+  /* glass */
+  background: rgba(131, 131, 131, 0.446);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  z-index: 20;
 }
 
 .navbar .navbar-logo {
   width: 50px;
   height: auto;
+  cursor: pointer;
+}
+.navbar-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 .navbar .navbar-links {
@@ -48,6 +66,42 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.navbar-links {
+  display: flex;
+  gap: 1.8rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+
+  opacity: 0.9;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  color: #004080;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    color 1s ease;
+}
+
+.navbar-links a.active {
+  font-weight: 700;
+  opacity: 1;
 }
 
 /* HERO */
@@ -81,20 +135,17 @@ body {
 .hero-overlay h1 {
   font-size: 3rem;
   line-height: 3rem;
-  
 }
 .hero-overlay h2 {
   font-size: 1rem;
   line-height: 2rem;
-
 }
 
 .hero-overlay p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   max-width: 500px;
   line-height: 1rem;
   margin-top: 1rem;
-
 }
 
 .hero-btn {
@@ -107,5 +158,3 @@ body {
   cursor: pointer;
   border-radius: 4px;
 }
-
-

@@ -1,7 +1,7 @@
 export function CartWidget() {
-    return (
-        <div>
-            ✈️<span>0</span>
-        </div>
-    )
+  return (
+    <div>
+      ✈️<span>0</span>
+    </div>
+  );
 }
