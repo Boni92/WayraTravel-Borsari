@@ -10,6 +10,7 @@ export const products = [
     nights: 18,
     price: 4200,
     image: "playa1",
+    stock: 35,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const products = [
     nights: 10,
     price: 2800,
     image: "playa2",
+    stock: 20,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const products = [
     nights: 12,
     price: 2400,
     image: "playa3",
+    stock: 45,
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const products = [
     nights: 14,
     price: 3100,
     image: "playa4",
+    stock: 30,
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ export const products = [
     nights: 9,
     price: 2200,
     image: "playa5",
+    stock: 50,
   },
   {
     id: 6,
@@ -70,6 +75,7 @@ export const products = [
     nights: 11,
     price: 3500,
     image: "playa6",
+    stock: 15,
   },
   {
     id: 7,
@@ -82,6 +88,7 @@ export const products = [
     nights: 7,
     price: 4800,
     image: "playa7",
+    stock: 40,
   },
   {
     id: 8,
@@ -94,6 +101,7 @@ export const products = [
     nights: 10,
     price: 2600,
     image: "montana1",
+    stock: 25,
   },
   {
     id: 9,
@@ -106,6 +114,7 @@ export const products = [
     nights: 12,
     price: 3900,
     image: "montana2",
+    stock: 35,
   },
   {
     id: 10,
@@ -118,6 +127,7 @@ export const products = [
     nights: 9,
     price: 3200,
     image: "montana3",
+    stock: 20,
   },
   {
     id: 11,
@@ -130,6 +140,7 @@ export const products = [
     nights: 8,
     price: 2100,
     image: "montana4",
+    stock: 50,
   },
   {
     id: 12,
@@ -142,6 +153,7 @@ export const products = [
     nights: 14,
     price: 3600,
     image: "montana5",
+    stock: 10,
   },
   {
     id: 13,
@@ -154,6 +166,7 @@ export const products = [
     nights: 11,
     price: 4000,
     image: "montana6",
+    stock: 30,
   },
   {
     id: 14,
@@ -166,6 +179,7 @@ export const products = [
     nights: 9,
     price: 2700,
     image: "montana7",
+    stock: 40,
   },
   {
     id: 15,
@@ -178,6 +192,7 @@ export const products = [
     nights: 12,
     price: 3300,
     image: "ciudad1",
+    stock: 25,
   },
   {
     id: 16,
@@ -190,6 +205,7 @@ export const products = [
     nights: 9,
     price: 2900,
     image: "ciudad2",
+    stock: 45,
   },
   {
     id: 17,
@@ -202,6 +218,7 @@ export const products = [
     nights: 10,
     price: 3400,
     image: "ciudad3",
+    stock: 15,
   },
   {
     id: 18,
@@ -214,6 +231,7 @@ export const products = [
     nights: 11,
     price: 3100,
     image: "ciudad4",
+    stock: 35,
   },
   {
     id: 19,
@@ -226,6 +244,7 @@ export const products = [
     nights: 7,
     price: 2800,
     image: "ciudad5",
+    stock: 50,
   },
   {
     id: 20,
@@ -238,6 +257,7 @@ export const products = [
     nights: 6,
     price: 1600,
     image: "ciudad6",
+    stock: 20,
   },
   {
     id: 21,
@@ -250,6 +270,7 @@ export const products = [
     nights: 9,
     price: 3000,
     image: "ciudad7",
+    stock: 40,
   },
 ];
 

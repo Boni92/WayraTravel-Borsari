@@ -1,10 +1,30 @@
 .item-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 18px;
 }
 
 /* Card */
+/* ===== MODO HOME (slider horizontal) ===== */
+.item-grid--home {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: left;
+  gap: 18px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* height: 70vh; */
+}
+
+.item-grid--home::-webkit-scrollbar {
+  height: 0px;
+}
+
+.item-grid--home::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+}
 .item-card {
   list-style: none;
   border-radius: 16px;

@@ -1,16 +1,54 @@
-# React + Vite
+# Wayra Travel — E-commerce (React + Firebase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single Page Application (SPA) desarrollada con React para un e-commerce de paquetes de viaje.
+Incluye catálogo por categorías, detalle de producto, carrito global con Context y checkout con generación de órdenes en Firestore.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Listado de productos y detalle por ID (React Router).
+- Navegación por categorías.
+- Carrito de compras con estado global (Context API).
+- Selector de cantidad con validación por stock (ItemCount).
+- Checkout con validaciones de formulario.
+- Generación de orden en Firestore y visualización del `orderId`.
+- Mensajes condicionales (cargando, carrito vacío, categoría sin productos, sin stock).
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router DOM
+- Firebase / Firestore
 
-## Expanding the ESLint configuration
+## Instalación y ejecución
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/Boni92/WayraTravel-Borsari.git
+npm install
+npm run dev
+```
+
+## Licencia
+
+Este proyecto fue realizado con fines educativos para Coderhouse.
+
+## Caracteristicas
+
+- Fácil de instalar y ejecutar
+
+- Navegación fluida sin recargar la página (SPA)
+
+- Arquitectura con separación de responsabilidades (containers / presentación)
+
+- Servicios desacoplados (mocks → firestore)
+
+- Renderizado condicional para mejorar UX
+
+## Capturas
+
+![Captura de React](https://brandslogos.com/wp-content/uploads/thumbs/react-logo-1.png)
+
+## Enlaces
+
+- [Documentación Oficial](https://react.dev)
+- [Repositorio](https://github.com/Boni92/WayraTravel-Borsari)
+- [Deploy]

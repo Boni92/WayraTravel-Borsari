@@ -24,11 +24,16 @@ body {
   margin: 0;
   font-family: var(--font-family);
   overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: black;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -80,7 +85,7 @@ body {
   text-decoration: none;
 
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: clamp(0.1rem, 0.78rem + 0.35vw, 0.95rem);
   letter-spacing: 0.3px;
 
   opacity: 0.9;
@@ -133,18 +138,18 @@ body {
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: clamp(30px, 5vw, 90px);
+  line-height: clamp(2.5rem, 6vw, 4rem);
 }
 .hero-overlay h2 {
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .hero-overlay p {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   max-width: 500px;
-  line-height: 1rem;
+  line-height: clamp(1.25rem, 3vw, 1.5rem);
   margin-top: 1rem;
 }
 
@@ -157,4 +162,41 @@ body {
   color: white;
   cursor: pointer;
   border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 17px;
+}
+
+/* Transition */
+.route-fade {
+  animation: routeFadeIn 2000ms ease both;
+}
+
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .route-fade {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px;
+  }
+  .navbar .navbar-links {
+    gap: 5px;
+  }
 }

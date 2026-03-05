@@ -1,0 +1,65 @@
+.site-footer {
+  margin-top: 40px;
+  background: linear-gradient(180deg, #0a0d12, #050608);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 26px 18px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+.site-footer__brand h3 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+}
+
+.site-footer__brand p,
+.site-footer__contact p {
+  margin: 0;
+  opacity: 0.82;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__links a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer__links a:hover {
+  color: #ffb780;
+  transform: translateX(2px);
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 18px 16px;
+  text-align: center;
+  opacity: 0.72;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 800px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}

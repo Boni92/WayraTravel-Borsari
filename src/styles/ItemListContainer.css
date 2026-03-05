@@ -1,0 +1,64 @@
+.home-section {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.home-section__block {
+  height: auto;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("../assets/back1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home-section__header {
+  width: 100%;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.home-section__title {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 90px);
+  font-weight: 700;
+  color: white;
+}
+
+.home-section__subtitle {
+  margin: 8px 0 0;
+  opacity: 0.8;
+  color: white;
+  font-size: clamp(8px, 2vw, 20px);
+}
+
+.home-section__slider {
+  padding: 0 40px;
+  background: none !important;
+}
+
+/* ===== MODO HOME (slider horizontal) ===== */
+/* ./ItemList.css */
+
+/* cada card “se engancha” al hacer scroll */
+.item-card--home {
+  min-width: 260px;
+  max-width: 260px;
+  scroll-snap-align: start;
+}
+
+/* imagen un poco más “hero” */
+.item-card--home .item-card-img {
+  height: 160px; /* ajustá si querés */
+  object-fit: cover;
+  border-radius: 16px;
+}

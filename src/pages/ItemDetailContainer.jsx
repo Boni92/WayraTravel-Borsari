@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { products } from "../data/products";
+import services from "../services";
 import ItemDetail from "../components/ItemDetail";
 import NotFound from "./NotFound";
 
@@ -10,38 +10,50 @@ export default function ItemDetailContainer() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const getItem = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const foundItem = products.find(
-          (product) =>
-            product.id === Number(itemId) && product.category === categoriaId,
-        );
-        if (foundItem) {
-          resolve(foundItem);
-        } else {
-          reject("Error: Item no encontrado");
-        }
-      }, 500);
-    });
+    // const getItem = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     const foundItem = products.find(
+    //       (product) =>
+    //         product.id === Number(itemId) && product.category === categoriaId,
+    //     );
+    //     if (foundItem) {
+    //       resolve(foundItem);
+    //     } else {
+    //       reject("Error: Item no encontrado");
+    //     }
+    //   }, 500);
+    // });
 
-    getItem
+    // getItem
+    //   .then((res) => {
+    //     setItem(res);
+    //     setError(null);
+    //   })
+    //   .catch((res) => {
+    //     setError(res);
+    //     setItem(null);
+    //   });
+
+    services
+      .getProductById(itemId)
       .then((res) => {
+        if (!res || res.category !== categoriaId) {
+          setError("Error: Item nno encontrado");
+          setItem(null);
+          return;
+        }
+
         setItem(res);
         setError(null);
       })
-      .catch((res) => {
-        setError(res);
+      .catch((err) => {
+        setError(err);
         setItem(null);
       });
   }, [categoriaId, itemId]);
 
   if (error) {
-    return (
-      // <div>
-      //   <h2>{error}</h2>
-      // </div>
-      <NotFound />
-    );
+    return <NotFound />;
   }
 
   if (!item) {

@@ -18,11 +18,6 @@ export default function Categories({ categoriaId, items }) {
         <div className="category-hero-glass">
           <h1>Explorá destinos de {categoriaId}</h1>
           <p>Experiencias diseñadas para descubrir el mundo</p>
-
-          <input
-            type="text"
-            placeholder="Buscar destinos, países o experiencias"
-          />
         </div>
       </section>
 
@@ -32,7 +27,14 @@ export default function Categories({ categoriaId, items }) {
         </div>
 
         <div className="featured-panel">
-          <ItemList items={items} />
+          {items.length > 0 ? (
+            <ItemList items={items} />
+          ) : (
+            <div className="empty-category">
+              <h3>Todavia no hay paquetes en esta categoría</h3>
+              <p>Estamos preparando nuevos paquetes. Volvé pronto!</p>
+            </div>
+          )}
         </div>
       </section>
     </div>
