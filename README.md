@@ -46,6 +46,10 @@ Este proyecto fue realizado con fines educativos para Coderhouse.
 ## Capturas
 
 ![Captura de React](https://brandslogos.com/wp-content/uploads/thumbs/react-logo-1.png)
+![Hero](/src/assets/ss1.png)
+![Categoria](/src/assets/ss2.png)
+![Carrito](/src/assets/ss3.png)
+![Checkout](/src/assets/ss4.png)
 
 ## Enlaces
 
